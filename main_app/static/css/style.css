@@ -62,20 +62,6 @@
   margin-top: 38px;
 }
 
-input#id_title {
-  color: white;
-}
-
-textarea#id_content {
-  color: white;
-}
-
-textarea {
-  width: 100%;
-  height: 10rem;
-  background-color: transparent;
-}
-
 .wide-tab {
   width: 200px;
 }
@@ -211,7 +197,40 @@ a {
   max-height: 444px;
 }
 
-.profile-content {
+.name-and-pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-right: 20px;
+  margin-top: 5%;
+  width: 25%;
+}
+
+.name-and-pic div:nth-of-type(2) {
+  text-align: left;
+}
+
+.update-btn {
+  z-index: 5;
+}
+
+.update-profile-btn {
+  width: 100%;
+  margin: 0 !important;
+}
+
+.profile-heading {
+  border-bottom: 1px solid white;
+}
+
+.posts-and-comments {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -225,96 +244,49 @@ a {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  width: 65%;
-  position: absolute;
-  top: 30%;
-  right: 10%;
-  height: 50%;
+  height: 70%;
+  margin-top: 5%;
 }
 
-input#id_name {
-  color: white;
+.profile-content-div {
+  margin-top: 5%;
+  width: 100%;
 }
 
-input#id_current_city {
-  color: white;
+.profile-info p {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
 }
 
-textarea#id_past_cities {
-  color: white;
-}
-
-.profile-cont {
-  position: absolute;
-  top: 10%;
-  left: 25%;
-  max-width: 65% p;
-  max-width-font-size: x-large;
-}
-
-.profile-cont .btn {
+.profile-info .btn {
   margin-top: 25px;
 }
 
-.posts-div {
-  overflow: scroll;
+.profile-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+}
+
+.profile-block div:nth-of-type(1) {
+  min-width: 175px;
+}
+
+.profile-block div:nth-of-type(2) p {
+  font-size: 1rem;
+}
+
+.profile-pic-div {
+  width: 150px;
+  height: 150px;
+}
+
+.profile-pic-div img {
   width: 100%;
 }
 
-.posts-div .card {
-  width: 100%;
-  height: 200px;
-}
-
-.posts-div .card-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.posts-div .card-content div:nth-of-type(1) {
-  width: 23%;
-  border-right: 1px solid white;
-  margin-right: 10px;
-}
-
-.posts-div .card-content div:nth-of-type(2) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 60%;
-}
-
-.posts-div::-webkit-scrollbar {
-  background-color: transparent;
-}
-
-.posts-div::-webkit-scrollbar-corner {
-  background-color: transparent;
-}
-
-.posts-div::-webkit-scrollbar-thumb {
-  background-color: #4a7a96;
-  border-radius: 5px;
-}
-
-#comments-tab-div,
-.posts-tabs-div {
-  height: 100%;
-}
-
+.posts-div,
 .comments-div {
-  height: 225px;
   overflow: scroll;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -326,45 +298,28 @@ textarea#id_past_cities {
   width: 100%;
 }
 
+.posts-div::-webkit-scrollbar,
 .comments-div::-webkit-scrollbar {
   background-color: transparent;
 }
 
+.posts-div::-webkit-scrollbar-corner,
 .comments-div::-webkit-scrollbar-corner {
   background-color: transparent;
 }
 
+.posts-div::-webkit-scrollbar-thumb,
 .comments-div::-webkit-scrollbar-thumb {
   background-color: #4a7a96;
   border-radius: 5px;
 }
 
-.comments-div .card-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.card {
+  width: 100%;
+  height: 200px;
 }
 
-.comments-div .card-content div:nth-of-type(1) {
-  width: 23%;
-  border-right: 1px solid white;
-  margin-right: 10px;
-}
-
-.comments-div .card-content div:nth-of-type(2) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 60%;
-}
-
-.comments-div .card-content div:nth-of-type(3) {
+.card .card-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -372,13 +327,37 @@ textarea#id_past_cities {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.card .card-content div:nth-of-type(1) {
+  text-align: center;
+}
+
+.card .card-content .card-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card .card-content .card-details div:nth-of-type(1) {
+  max-width: 25%;
+  border-right: 1px solid white;
+  margin-right: 10px;
+}
+
+.card .card-content .card-details div:nth-of-type(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 75%;
 }
 
-.comments-div .card {
-  width: 100%;
+#comments-tab-div,
+.posts-tabs-div {
+  height: 100%;
 }
 
 #tabs-row {
@@ -393,10 +372,7 @@ textarea#id_past_cities {
 
 .tab a {
   color: white !important;
-}
-
-.update-btn {
-  z-index: 5;
+  padding-left: 10px !important;
 }
 
 #posts-tab,
@@ -414,17 +390,6 @@ textarea#id_past_cities {
 
 .profile-comment-title {
   border-bottom: 1px solid white;
-}
-
-.profile-pic-div {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  left: -75px;
-}
-
-.profile-pic-div img {
-  width: 100%;
 }
 
 nav {
@@ -477,23 +442,9 @@ form {
   margin-right: 500px;
 }
 
-input {
-  border-bottom: #333f58;
-}
-
-input#id_password {
-  color: white;
-}
-
-input#id_email {
-  color: white;
-}
-
-input#id_password1 {
-  color: white;
-}
-
-input#id_password2 {
+input,
+textarea {
+  border-bottom: 2px solid #333f58;
   color: white;
 }
 
@@ -503,8 +454,8 @@ label {
   margin-bottom: 50px;
 }
 
-#id_username {
-  color: white;
+label + a {
+  font-size: 0.8rem;
 }
 
 .btn,
@@ -521,10 +472,6 @@ label {
 
 .helptext {
   display: none;
-}
-
-input#id_username {
-  background-color: transparent;
 }
 
 .red-text {

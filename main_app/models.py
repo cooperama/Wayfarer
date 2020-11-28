@@ -13,6 +13,7 @@ class Profile(models.Model):
     current_city = models.CharField(max_length=100)
     join_date = models.DateField(auto_now_add=True)
     past_cities = models.TextField(blank=True)
+    future_cities = models.TextField(blank=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     pic = models.ImageField(upload_to="main_app/static/images", null=True)
 

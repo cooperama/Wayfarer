@@ -9,23 +9,9 @@ form {
   margin-right: 500px;
 }
 
-input {
-  border-bottom: $dark-blue;
-}
-
-input#id_password {
-  color: white;
-}
-
-input#id_email {
-  color: white;
-}
-
-input#id_password1 {
-  color: white;
-}
-
-input#id_password2 {
+input,
+textarea {
+  border-bottom: 2px solid $dark-blue;
   color: white;
 }
 
@@ -33,11 +19,15 @@ label {
   color: white;
   margin-top: 25px;
   margin-bottom: 50px;
+
+  & + a {
+    font-size: 0.8rem;
+  }
 }
 
-#id_username {
-  color: white;
-}
+// #id_username {
+//   color: white;
+// }
 
 .btn,
 .btn-large,
@@ -53,10 +43,6 @@ label {
 
 .helptext {
   display: none;
-}
-
-input#id_username {
-  background-color: transparent;
 }
 
 .red-text {

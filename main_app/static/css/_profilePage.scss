@@ -1,33 +1,47 @@
-.profile-content {
+.name-and-pic {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-right: 20px;
+  margin-top: 5%;
+  width: 25%;
+
+  div:nth-of-type(2) {
+    text-align: left;
+  }
+}
+
+.update-btn {
+  z-index: 5;
+}
+
+.update-profile-btn {
+  width: 100%;
+  margin: 0 !important;
+}
+
+.profile-heading {
+  border-bottom: 1px solid white;
+}
+
+.posts-and-comments {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
-  width: 65%;
-  position: absolute;
-  top: 30%;
-  right: 10%;
-  height: 50%;
+  height: 70%;
+  margin-top: 5%;
 }
 
-input#id_name {
-  color: white;
+.profile-content-div {
+  margin-top: 5%;
+  width: 100%;
 }
 
-input#id_current_city {
-  color: white;
-}
-
-textarea#id_past_cities {
-  color: white;
-}
-
-.profile-cont {
-  position: absolute;
-  top: 10%;
-  left: 25%;
-  max-width: 65% p {
-    font-size: x-large;
+.profile-info {
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
   }
 
   .btn {
@@ -35,30 +49,33 @@ textarea#id_past_cities {
   }
 }
 
-.posts-div {
+.profile-block {
+  display: flex;
+  div:nth-of-type(1) {
+    min-width: 175px;
+  }
+  div:nth-of-type(2) {
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+.profile-pic-div {
+  width: 150px;
+  height: 150px;
+  img {
+    width: 100%;
+  }
+}
+
+.posts-div,
+.comments-div {
   overflow: scroll;
   display: flex;
   flex-direction: column;
   width: 100%;
 
-  .card {
-    width: 100%;
-    height: 200px;
-  }
-  .card-content {
-    display: flex;
-
-    div:nth-of-type(1) {
-      width: 23%;
-      border-right: 1px solid white;
-      margin-right: 10px;
-    }
-    div:nth-of-type(2) {
-      display: flex;
-      align-items: center;
-      width: 60%;
-    }
-  }
   &::-webkit-scrollbar {
     background-color: transparent;
   }
@@ -68,6 +85,34 @@ textarea#id_past_cities {
   &::-webkit-scrollbar-thumb {
     background-color: $light-blue;
     border-radius: 5px;
+  }
+}
+
+.card {
+  width: 100%;
+  height: 200px;
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+
+    div:nth-of-type(1) {
+      text-align: center;
+    }
+    .card-details {
+      display: flex;
+
+      div:nth-of-type(1) {
+        max-width: 25%;
+        border-right: 1px solid white;
+        margin-right: 10px;
+      }
+      div:nth-of-type(2) {
+        display: flex;
+        align-items: center;
+        width: 75%;
+      }
+    }
   }
 }
 
@@ -76,46 +121,46 @@ textarea#id_past_cities {
   height: 100%;
 }
 
-.comments-div {
-  height: 225px;
-  overflow: scroll;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  &::-webkit-scrollbar {
-    background-color: transparent;
-  }
-  &::-webkit-scrollbar-corner {
-    background-color: transparent;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: $light-blue;
-    border-radius: 5px;
-  }
-  .card-content {
-    display: flex;
-    justify-content: space-between;
+// .comments-div {
+//   height: 225px;
+//   overflow: scroll;
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
+//   &::-webkit-scrollbar {
+//     background-color: transparent;
+//   }
+//   &::-webkit-scrollbar-corner {
+//     background-color: transparent;
+//   }
+//   &::-webkit-scrollbar-thumb {
+//     background-color: $light-blue;
+//     border-radius: 5px;
+//   }
+//   // .card-content {
+//   //   display: flex;
+//   //   justify-content: space-between;
 
-    div:nth-of-type(1) {
-      width: 23%;
-      border-right: 1px solid white;
-      margin-right: 10px;
-    }
-    div:nth-of-type(2) {
-      display: flex;
-      align-items: center;
-      width: 60%;
-    }
-    div:nth-of-type(3) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-  .card {
-    width: 100%;
-  }
-}
+//   //   div:nth-of-type(1) {
+//   //     width: 23%;
+//   //     border-right: 1px solid white;
+//   //     margin-right: 10px;
+//   //   }
+//   //   div:nth-of-type(2) {
+//   //     display: flex;
+//   //     align-items: center;
+//   //     width: 60%;
+//   //   }
+//   //   div:nth-of-type(3) {
+//   //     display: flex;
+//   //     flex-direction: column;
+//   //     align-items: center;
+//   //   }
+//   // }
+//   // .card {
+//   //   width: 100%;
+//   // }
+// }
 
 #tabs-row {
   height: auto;
@@ -127,11 +172,8 @@ textarea#id_past_cities {
   border-top: 1px solid white;
   a {
     color: white !important;
+    padding-left: 10px !important;
   }
-}
-
-.update-btn {
-  z-index: 5;
 }
 
 #posts-tab,
@@ -149,15 +191,4 @@ textarea#id_past_cities {
 
 .profile-comment-title {
   border-bottom: 1px solid white;
-}
-
-.profile-pic-div {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  left: -75px;
-  img {
-    width: 100%;
-    // border-radius: 50%;
-  }
 }

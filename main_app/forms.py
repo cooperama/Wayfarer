@@ -11,6 +11,7 @@ class ProfileForm(forms.ModelForm):
             'name',
             'current_city',
             'past_cities',
+            'future_cities',
             'pic'
         ]
 
