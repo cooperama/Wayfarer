@@ -1,0 +1,30 @@
+// --------------------------------------- Nav-Bar
+nav {
+  box-shadow: none;
+  background-color: transparent;
+
+  ul {
+    display: flex;
+
+    a {
+      font-size: 1.1rem !important;
+      text-shadow: -1px 1px 2px $dark-blue;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+}
+
+.brand-logo {
+  font-size: 2.1rem !important;
+}
+
+.nav-wrapper {
+  background-color: transparent;
+}
+
+.brand-logo {
+  display: flex;
+}

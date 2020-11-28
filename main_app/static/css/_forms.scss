@@ -1,0 +1,104 @@
+form {
+  width: 450px;
+  margin-left: 50px;
+}
+
+.form-cont {
+  height: fit-content;
+  margin-top: 100px;
+  margin-right: 500px;
+}
+
+input {
+  border-bottom: $dark-blue;
+}
+
+input#id_password {
+  color: white;
+}
+
+input#id_email {
+  color: white;
+}
+
+input#id_password1 {
+  color: white;
+}
+
+input#id_password2 {
+  color: white;
+}
+
+label {
+  color: white;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+#id_username {
+  color: white;
+}
+
+.btn,
+.btn-large,
+.btn-small {
+  background-color: transparent;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: $dark-blue;
+}
+
+.helptext {
+  display: none;
+}
+
+input#id_username {
+  background-color: transparent;
+}
+
+.red-text {
+  color: white !important;
+  height: 150px;
+  position: absolute;
+  margin-left: 252px;
+  margin-top: 34px;
+  font-size: x-large;
+}
+
+.delete-btn {
+  background-color: rgba(249, 157, 172, 0.461);
+}
+
+::placeholder {
+  font-family: "Courier New", Courier, monospace;
+  padding: 5px;
+}
+
+// --------------------------------------- Error
+ul.errorlist.nonfield {
+  color: white !important;
+  display: flex !important;
+  font-size: x-large;
+}
+// --------------------------------------- Modals
+.modal {
+  background-image: linear-gradient(
+    45deg,
+    $wash-black,
+    $light-blue,
+    $orange-pink
+  );
+}
+
+.modal .modal-footer {
+  background-color: transparent;
+}
+
+.modal-content {
+  h4 {
+    color: white;
+  }
+}

@@ -1,0 +1,10 @@
+// --------------------------------------- Tablet & Under
+@media (max-width: 500px) {
+  .navbar-fixed {
+    height: 110px;
+  }
+
+  .brand-logo {
+    flex-direction: column;
+  }
+}

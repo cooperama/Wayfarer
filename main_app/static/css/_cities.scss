@@ -1,0 +1,63 @@
+// --------------------------------------- Cities
+div.city-img {
+  height: 400px;
+  margin-top: 41px;
+  margin-left: 5%;
+  margin-right: 5%;
+
+  .btn,
+  .btn-large,
+  .btn-small {
+    background-color: transparent;
+    margin-left: 0 !important;
+    margin-top: 10px;
+  }
+}
+
+.city-link :hover {
+}
+
+.city-cont {
+  display: block;
+  width: 82%;
+  margin-top: 42px;
+
+  p {
+    margin-bottom: 25px;
+  }
+
+  a {
+    color: white;
+    font-size: x-large;
+  }
+
+  .card {
+    display: block;
+    height: fit-content;
+    margin-left: 10px;
+    background-color: transparent;
+
+    a {
+      display: block;
+    }
+  }
+}
+a {
+  color: white;
+  font-size: x-large;
+}
+
+.city-scroll {
+  height: 200px;
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $light-blue;
+    border-radius: 5px;
+  }
+}

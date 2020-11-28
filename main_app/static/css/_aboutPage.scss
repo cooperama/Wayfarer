@@ -1,0 +1,47 @@
+.parent-card {
+  display: inline-flex;
+  flex-wrap: wrap;
+  height: 945px;
+  margin-top: 27px;
+
+  .card1 {
+    width: 425px;
+    max-height: 454px;
+    margin: 5px;
+  }
+
+  .card {
+    width: 200px;
+    height: 300px;
+    justify-content: space-evenly;
+    background-color: transparent;
+    border-radius: 50% !important;
+  }
+  img {
+    border-radius: 50% !important;
+    border: 3px solid white;
+  }
+}
+
+.card-image {
+  height: 100%;
+  display: flex;
+  border-radius: 50% !important;
+  background-color: transparent;
+}
+
+.row {
+  height: 444px;
+}
+
+.about-text {
+  font-size: 12px;
+}
+
+.card-content {
+  max-height: 200px;
+}
+
+.col {
+  max-height: 444px;
+}

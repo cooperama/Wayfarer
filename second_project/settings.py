@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'second_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,8 +76,8 @@ WSGI_APPLICATION = 'second_project.wsgi.application'
 # UploadCare Config
 
 UPLOADCARE = {
-    'pub_key': 'a1e5d49ca34791f88ffc',
-    'secret': 'bdef685812ca57ea96fe'
+    'pub_key': '0a201bcf8a0f61038809',
+    'secret': 'eda0e87252195cd4773e'
 }
 
 
@@ -143,3 +144,8 @@ EMAIL_HOST_PASSWORD = 'partyJESUS4lif3'
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static'
+
+STATICFILE_DIRS = [
+    # BASE_DIR / "static",
+    os.path.join(BASE_DIR, 'static')
+]

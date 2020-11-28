@@ -1,0 +1,53 @@
+// --------------------------------------- Titles
+.rotate {
+  writing-mode: vertical-lr;
+  transform: scale(1);
+  width: 60px;
+  text-orientation: upright;
+}
+
+span.rotate {
+  height: fit-content;
+}
+
+.about,
+.welcome {
+  font-size: 4rem;
+}
+
+h1,
+h2 {
+  color: white;
+  padding: 0;
+  border-left: 3px solid white;
+  height: fit-content;
+  font-size: 3rem;
+}
+
+.welcome-outline {
+  border-left: 3px solid white;
+  margin-top: 0;
+}
+
+p {
+  color: white;
+  margin-left: 10px;
+  font-size: medium;
+}
+// --------------------------------------- Truncate
+.truncate {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  white-space: pre-wrap;
+  -webkit-box-orient: vertical;
+}
+
+.truncate-comment {
+  display: -webkit-box;
+  white-space: pre-wrap;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
