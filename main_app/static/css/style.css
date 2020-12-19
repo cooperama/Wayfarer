@@ -340,7 +340,7 @@ a {
 }
 
 .card .card-content .card-details div:nth-of-type(1) {
-  max-width: 25%;
+  max-width: 23%;
   border-right: 1px solid white;
   margin-right: 10px;
 }
